@@ -217,51 +217,6 @@ header {
   color: #aaa;
   font-size: 0.95rem;
 }
-/*=============================================== FIN CSS HOME*/
-/*=============================================== CSS SERVICE PAGE*/
-#particles-js {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1; /* detrás del contenido */
-  background: #0a0a0a; /* fondo oscuro */
-}
-
-.services-header {
-  width: 100%;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-}
-
-
-
-.services-grid {
-  display: flex;
-  gap: 30px;
-  margin-top: 40px;
-}
-
-.service-box {
-  background: rgba(255,255,255,0.05);
-  padding: 30px;
-  border-radius: 15px;
-  flex: 1;
-}
-.service-box h3 {
-  color: #ffaa00;
-}
-.service-box p{
-  text-align: justify;
-}
-.service-imgANdtitle{
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 15px;
-}
 /* ======================
    MEDIA QUERIES
    ====================== */
@@ -340,3 +295,49 @@ header {
     gap: 20px;
   }
 }
+/*=============================================== FIN CSS HOME*/
+/*=============================================== CSS SERVICE PAGE*/
+#particles-js {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* detrás del contenido */
+  background: #0a0a0a; /* fondo oscuro */
+}
+
+.services-header {
+  width: 100%;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+.services-grid {
+  display: flex;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.service-box {
+  background: rgba(255,255,255,0.05);
+  padding: 30px;
+  border-radius: 15px;
+  flex: 1;
+}
+.service-box h3 {
+  color: #ffaa00;
+}
+.service-box p{
+  text-align: justify;
+}
+.service-imgANdtitle{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 15px;
+}
+/*=============================================== FIN CSS SERVICE PAGE*/
