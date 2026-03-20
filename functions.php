@@ -12,3 +12,10 @@ function clouditsoft_assets() {
 }
 
 add_action('wp_enqueue_scripts', 'clouditsoft_assets');
+
+function clouditsoft_register_menus() {
+  register_nav_menus(array(
+    'primary' => __('Primary Menu', 'clouditsoft-theme'),
+  ));
+}
+add_action('after_setup_theme', 'clouditsoft_register_menus');

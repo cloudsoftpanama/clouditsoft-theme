@@ -1,4 +1,6 @@
-/* RESET */
+/* ======================
+   RESET
+   ====================== */
 * {
   margin: 0;
   padding: 0;
@@ -10,59 +12,70 @@
 body {
   background: #0a0a0a;
   color: white;
+  padding-top: 105px; /* altura total del header */
 }
+
+/* ======================
+   HEADER
+   ====================== */
 header {
   position: fixed;
   top: 0;
+  left: 0;
   width: 100%;
-  z-index: 1000;
-  background: #0a0a0a; /* fondo negro */
-  padding: 15px 30px;
+  background: #0a0a0a;
+  padding: 50px 100px 100px 80px; /* padding-top mayor para despegar del borde */
   display: flex;
-  justify-content: space-between; /* logo izquierda, nav derecha */
+  justify-content: space-between; /* logo a la izquierda, menú a la derecha */
   align-items: center;
-  box-sizing: border-box;
+  z-index: 1000;
+  border-radius: 0 0 12px 12px;
+
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
 }
 
 /* LOGO */
-header h1 {
+.logo a {
   color: #00AEEF;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   font-weight: 600;
-  margin: 0;
-  flex-shrink: 0; /* que no se reduzca */
+  text-decoration: none;
+  display: block;
 }
 
-/* NAV */
-nav {
+/* MENÚ */
+.main-nav {
   display: flex;
-  gap: 25px;        /* espacio entre links */
-  margin-left: 20px; /* separación del logo */
-  flex-wrap: wrap;    /* evita que se corten los links en pantallas pequeñas */
+  gap: 30px;
 }
 
-/* LINKS */
-nav a {
+.main-nav a {
   color: white;
   text-decoration: none;
   font-size: 1.05rem;
   transition: 0.3s;
-  white-space: nowrap; /* evita que los enlaces se rompan */
 }
 
-nav a:hover {
+.main-nav a:hover {
   color: #00AEEF;
 }
 
 /* ======================
-   HERO Y SECCIONES
+   HERO
    ====================== */
 .hero {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 180px 120px 60px 120px;
-  min-height: 100vh;
+  padding: 210px 120px 60px 120px;
+  min-height: calc(100vh - 105px); /* altura hero menos header */
 }
 
 .hero-left {
@@ -79,7 +92,7 @@ nav a:hover {
 }
 
 .hero-left h1 {
-  font-size: 5rem;
+  font-size: 4.5rem;
   line-height: 1.1;
 }
 
@@ -94,13 +107,13 @@ nav a:hover {
 }
 
 .buttons {
-  margin: 40px 0;
+  margin: 30px 0;
 }
 
 .btn-primary {
   background: #00AEEF;
   border: none;
-  padding: 15px 35px;
+  padding: 12px 30px;
   border-radius: 12px;
   color: white;
   cursor: pointer;
@@ -111,7 +124,7 @@ nav a:hover {
   background: transparent;
   border: 1px solid #00AEEF;
   color: #00AEEF;
-  padding: 15px 35px;
+  padding: 12px 30px;
   border-radius: 12px;
   cursor: pointer;
   margin-left: 10px;
@@ -126,12 +139,12 @@ nav a:hover {
 .stats {
   display: flex;
   gap: 60px;
-  margin-top: 50px;
+  margin-top: 40px;
 }
 
 .stats h3 {
   color: #ffaa00;
-  font-size: 1.6rem;
+  font-size: 1.5rem;
 }
 
 .stats p {
@@ -142,13 +155,13 @@ nav a:hover {
   flex: 1;
   display: flex;
   justify-content: flex-end;
-  padding-right: 80px;
+  padding-right: 40px;
 }
 
 .carousel {
   position: relative;
   width: 400px;
-  height: 500px;
+  height: 450px;
   overflow: hidden;
 }
 
@@ -159,12 +172,10 @@ nav a:hover {
   background: rgba(255, 170, 0, 0.06);
   border: 1px solid rgba(255, 170, 0, 0.25);
   border-radius: 25px;
-  padding: 25px;
-
+  padding: 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-
   opacity: 0;
   transform: translateX(100%);
   transition: all 0.5s ease;
@@ -183,7 +194,7 @@ nav a:hover {
 }
 
 .service h4 {
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   margin-top: 15px;
 }
 
@@ -196,7 +207,7 @@ nav a:hover {
    PÁGINAS GENERALES
    ====================== */
 .page {
-  padding: 150px 120px;
+  padding: 120px 120px;
 }
 
 .page h1 {
@@ -210,7 +221,6 @@ nav a:hover {
   margin-bottom: 20px;
 }
 
-/* SERVICIOS GRID */
 .services-grid {
   display: flex;
   gap: 30px;
@@ -230,7 +240,7 @@ nav a:hover {
 @media (max-width: 1024px) {
   .hero {
     flex-direction: column;
-    padding: 150px 50px 50px 50px;
+    padding: 80px 50px 50px 50px;
   }
 
   .hero-left {
@@ -240,7 +250,7 @@ nav a:hover {
 
   .hero-right {
     padding-right: 0;
-    margin-top: 40px;
+    margin-top: 30px;
   }
 
   .carousel {
@@ -251,14 +261,14 @@ nav a:hover {
 
 @media (max-width: 768px) {
   header {
-    padding: 10px 20px;
+    padding: 35px 20px 12px 20px;
   }
 
-  nav {
+  .main-nav {
     gap: 15px;
   }
 
-  nav a {
+  .main-nav a {
     font-size: 1rem;
   }
 
@@ -277,6 +287,17 @@ nav a:hover {
 }
 
 @media (max-width: 480px) {
+  .nav-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .main-nav {
+    width: 100%;
+    justify-content: space-around;
+    margin-top: 10px;
+  }
+
   .buttons {
     flex-direction: column;
   }
