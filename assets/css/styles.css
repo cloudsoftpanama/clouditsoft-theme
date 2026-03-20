@@ -75,6 +75,7 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 0px 120px 60px 120px;
+  margin-top: -30px; /* empuja el hero hacia arriba */
   min-height: calc(100vh - 105px); /* altura hero menos header */
 }
 

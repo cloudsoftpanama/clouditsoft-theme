@@ -58,4 +58,21 @@
 
 </section>
 
+
 <?php get_footer(); ?>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const services = document.querySelectorAll('.carousel .service');
+  let current = 0;
+
+  function showNextService() {
+    services[current].classList.remove('active');
+    current = (current + 1) % services.length;
+    services[current].classList.add('active');
+  }
+
+  // Cambia de carta cada 3 segundos
+  setInterval(showNextService, 3000);
+});
+</script>
