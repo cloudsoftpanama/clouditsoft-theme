@@ -24,7 +24,7 @@ header {
   left: 0;
   width: 100%;
   background: #0a0a0a;
-  padding: 50px 100px 100px 80px; /* padding-top mayor para despegar del borde */
+  padding: 50px 100px 25px 85px; /* padding-top mayor para despegar del borde */
   display: flex;
   justify-content: space-between; /* logo a la izquierda, menú a la derecha */
   align-items: center;
@@ -66,7 +66,22 @@ header {
 .main-nav a:hover {
   color: #00AEEF;
 }
+/* ====================== ====================== PÁGINAS GENERALES*/
+.page {
+  padding: 50px 50px;/*antes 120*/
+}
+.page h1 {
+  font-size: 3rem;
+  margin-bottom: 30px;
+  color: #ffaa00;
+}
 
+.page p {
+  color: #aaa;
+  margin-bottom: 20px;
+}
+/*============================================== FIN PÁGINAS GENERALES*/
+/*=============================================== CSS HOME*/
 /* ======================
    HERO
    ====================== */
@@ -202,24 +217,26 @@ header {
   color: #aaa;
   font-size: 0.95rem;
 }
-
-/* ======================
-   PÁGINAS GENERALES
-   ====================== */
-.page {
-  padding: 120px 120px;
+/*=============================================== FIN CSS HOME*/
+/*=============================================== CSS SERVICE PAGE*/
+#particles-js {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* detrás del contenido */
+  background: #0a0a0a; /* fondo oscuro */
 }
 
-.page h1 {
-  font-size: 3rem;
-  margin-bottom: 30px;
+.services-header {
+  width: 100%;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
 }
 
-.page p {
-  color: #aaa;
-  max-width: 700px;
-  margin-bottom: 20px;
-}
+
 
 .services-grid {
   display: flex;
@@ -233,7 +250,18 @@ header {
   border-radius: 15px;
   flex: 1;
 }
-
+.service-box h3 {
+  color: #ffaa00;
+}
+.service-box p{
+  text-align: justify;
+}
+.service-imgANdtitle{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 15px;
+}
 /* ======================
    MEDIA QUERIES
    ====================== */
