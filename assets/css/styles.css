@@ -11,62 +11,60 @@ body {
   background: #0a0a0a;
   color: white;
 }
-
-/* NAVBAR */
 header {
   position: fixed;
-  top: 20px;
+  top: 0;
   width: 100%;
   z-index: 1000;
-}
-
-/* CONTENEDOR CONTROLADO */
-.nav-container {
-  max-width: 1200px;     /* evita que se estire demasiado */
-  margin: 0 auto;        /* centra todo el bloque */
-  padding: 15px 30px;    /* espacio lateral seguro */
-
+  background: #0a0a0a; /* fondo negro */
+  padding: 15px 30px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; /* logo izquierda, nav derecha */
   align-items: center;
+  box-sizing: border-box;
 }
 
-/* LOGO (izquierda real) */
+/* LOGO */
 header h1 {
   color: #00AEEF;
-  font-size: 1.3rem;     /* reducido */
+  font-size: 1.3rem;
   font-weight: 600;
   margin: 0;
+  flex-shrink: 0; /* que no se reduzca */
 }
 
 /* NAV */
 nav {
   display: flex;
-  gap: 25px;
+  gap: 25px;        /* espacio entre links */
+  margin-left: 20px; /* separación del logo */
+  flex-wrap: wrap;    /* evita que se corten los links en pantallas pequeñas */
 }
 
 /* LINKS */
 nav a {
   color: white;
   text-decoration: none;
-  font-size: 1.05rem;   /* tamaño controlado */
+  font-size: 1.05rem;
   transition: 0.3s;
-  white-space: nowrap;  /* evita que se rompan */
+  white-space: nowrap; /* evita que los enlaces se rompan */
 }
 
 nav a:hover {
   color: #00AEEF;
 }
-/* HERO */
+
+/* ======================
+   HERO Y SECCIONES
+   ====================== */
 .hero {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 180px 120px;
+  padding: 180px 120px 60px 120px;
   min-height: 100vh;
 }
 
-/* IZQUIERDA */
 .hero-left {
   max-width: 50%;
 }
@@ -95,7 +93,6 @@ nav a:hover {
   max-width: 600px;
 }
 
-/* BOTONES */
 .buttons {
   margin: 40px 0;
 }
@@ -126,7 +123,6 @@ nav a:hover {
   transform: scale(1.05);
 }
 
-/* STATS */
 .stats {
   display: flex;
   gap: 60px;
@@ -142,7 +138,6 @@ nav a:hover {
   color: #ccc;
 }
 
-/* DERECHA */
 .hero-right {
   flex: 1;
   display: flex;
@@ -150,7 +145,6 @@ nav a:hover {
   padding-right: 80px;
 }
 
-/* CAROUSEL */
 .carousel {
   position: relative;
   width: 400px;
@@ -158,7 +152,6 @@ nav a:hover {
   overflow: hidden;
 }
 
-/* CARD */
 .service {
   position: absolute;
   width: 100%;
@@ -182,7 +175,6 @@ nav a:hover {
   transform: translateX(0);
 }
 
-/* IMAGEN */
 .service img {
   width: 100%;
   height: 260px;
@@ -190,7 +182,6 @@ nav a:hover {
   border-radius: 18px;
 }
 
-/* TEXTO */
 .service h4 {
   font-size: 1.4rem;
   margin-top: 15px;
@@ -201,7 +192,9 @@ nav a:hover {
   font-size: 0.95rem;
 }
 
-/* PÁGINAS GENERALES */
+/* ======================
+   PÁGINAS GENERALES
+   ====================== */
 .page {
   padding: 150px 120px;
 }
@@ -230,22 +223,71 @@ nav a:hover {
   border-radius: 15px;
   flex: 1;
 }
-@media (max-width: 768px) {
 
-  .nav-container {
-    padding: 15px 25px;
+/* ======================
+   MEDIA QUERIES
+   ====================== */
+@media (max-width: 1024px) {
+  .hero {
+    flex-direction: column;
+    padding: 150px 50px 50px 50px;
   }
 
-  header h1 {
-    font-size: 1.3rem;
+  .hero-left {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .hero-right {
+    padding-right: 0;
+    margin-top: 40px;
+  }
+
+  .carousel {
+    width: 300px;
+    height: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    padding: 10px 20px;
   }
 
   nav {
-    gap: 20px;
+    gap: 15px;
   }
 
   nav a {
     font-size: 1rem;
   }
 
+  .hero-left h1 {
+    font-size: 3rem;
+  }
+
+  .hero-left p {
+    max-width: 100%;
+  }
+
+  .carousel {
+    width: 100%;
+    height: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .buttons {
+    flex-direction: column;
+  }
+
+  .btn-secondary {
+    margin-left: 0;
+    margin-top: 15px;
+  }
+
+  .stats {
+    flex-direction: column;
+    gap: 20px;
+  }
 }
