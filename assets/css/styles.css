@@ -341,3 +341,29 @@ header {
   gap: 15px;
 }
 /*=============================================== FIN CSS SERVICE PAGE*/
+/*=============================================== CSS CONTACT PAGE*/
+.contact{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 30px;
+  margin-top: 50px;
+}
+.contact-form-bg{
+  background: rgba(255,255,255,0.05);
+  padding: 30px;
+  border-radius: 15px;
+  width: 100%;
+  max-width: 500px;
+}
+.contact-form{
+  display: flex;
+  flex-direction: column;
+}
+.contact-info{
+  background: rgba(255,255,255,0.05);
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
