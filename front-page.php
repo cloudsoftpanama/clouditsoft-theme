@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-
+<div id="wow-bg"></div>
 <section class="hero">
 
   <!-- IZQUIERDA -->
@@ -36,26 +36,25 @@
       </div>
     </div>
   </div>
-
-  <!-- DERECHA -->
-  <div class="hero-right">
-    <div class="carousel">
-
-      <div class="service active">
-        <img src="https://via.placeholder.com/400x300">
-        <h4>Automatización</h4>
-        <p>Procesos inteligentes para optimizar tu negocio.</p>
-      </div>
-
-      <div class="service">
-        <img src="https://via.placeholder.com/400x300">
-        <h4>Cloud</h4>
-        <p>Infraestructura escalable y segura.</p>
-      </div>
-
+<div class="hero-right">
+  <div class="carousel">
+    <div class="service active">
+      <img src="https://via.placeholder.com/400x300">
+      <h4>Automatización</h4>
+      <p>Procesos inteligentes para optimizar tu negocio.</p>
+    </div>
+    <div class="service">
+      <img src="https://via.placeholder.com/400x300">
+      <h4>Cloud</h4>
+      <p>Infraestructura escalable y segura.</p>
+    </div>
+    <div class="service">
+      <img src="https://via.placeholder.com/400x300">
+      <h4>Soporte</h4>
+      <p>Atención rápida y confiable 24/7.</p>
     </div>
   </div>
-
+</div>
 </section>
 
 
