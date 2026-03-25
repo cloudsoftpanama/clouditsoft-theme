@@ -10,7 +10,9 @@
 
   <div class="contact">
     <div class="contact-form-bg">
-      <form action="" class="contact-form">
+      <form method="POST" action="<?php echo admin_url('admin-post.php'); ?>" class="contact-form">
+      <input type="hidden" name="action" value="enviar_formulario">  
+      
         <label for="name">Nombre</label>
         <input type="text" id="name" name="name" required>
 
@@ -56,5 +58,7 @@
     </div>
   </div>
 </section>
-
+<?php if (isset($_GET['enviado'])): ?>
+    <p style="color: green;">Mensaje enviado correctamente</p>
+<?php endif; ?>
 <?php get_footer(); ?>

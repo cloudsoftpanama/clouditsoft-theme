@@ -43,6 +43,7 @@ particlesJS("particles-js", {
   }
 });
 //=============================== FIN JS PARTICLES SERVICE PAGE===============================
+//=============================== JS FORM FUNCTION ===============================
 function procesar_formulario_contacto() {
 
     // Seguridad básica
@@ -54,7 +55,8 @@ function procesar_formulario_contacto() {
     $email = sanitize_email($_POST['email']);
     $mensaje = sanitize_textarea_field($_POST['message']);
 
-    $para = get_option('cloudsoftpanama@gmail.com'); // correo destino (puedes cambiarlo)
+    //$para = get_option('cloudsoftpanama@gmail.com'); // correo destino (puedes cambiarlo)
+    $para = "cloudsoftpanama@gmail.com";
     $asunto = "Nuevo mensaje de contacto";
 
     $contenido = "Nombre: $nombre\n";
