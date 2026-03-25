@@ -2,13 +2,11 @@
 
 <section class="page">
 
-  <h1>Contacto</h1>
-
-  <p>Contáctanos para más información.</p>
-
-  <a class="btn-primary" href="https://wa.me/507XXXXXXXX">
-    Escribir por WhatsApp
-  </a>
+<div id="particles-js"></div>
+  <div class="contact-header">
+    <h1>Contáctanos</h1>
+    <p>¿Tienes alguna pregunta o necesitas más información? No dudes en contactarnos. Estamos aquí para ayudarte.</p>
+  </div>
 
   <div class="contact">
     <div class="contact-form-bg">
@@ -36,13 +34,23 @@
           <p><strong>Teléfono:</strong> +507 XXXXXXXX</p>
         </div>
       </div>
-        <div class="contact-info-box">
+      <div class="contact-info-box">
         <div>
             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/contact_mail.svg" alt="correo">
         </div>
         <div>
           <h3>Correo Electrónico</h3>
           <p><strong>Correo:</strong> clouds@clouditsoft.com</p>
+        </div>
+      </div>
+      <div class="contact-info-box">
+        <div>
+          <h3>Nuestras redes</h3>
+        </div>
+        <div class="social-icons">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/social_instagram.png" alt="Instagram" class="icon">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/social_whatsapp.png" alt="WhatsApp" class="icon">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/social_linkedin.png" alt="LinkedIn" class="icon">
         </div>
       </div>
     </div>
