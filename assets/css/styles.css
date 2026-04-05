@@ -83,14 +83,14 @@ header {
 /*=============================================== CSS HOME*/
 /* ======================
    HERO
-   ====================== */
+   ====================== 
 .hero {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0px 120px 60px 120px;
-  margin-top: -30px; /* empuja el hero hacia arriba */
-  min-height: calc(100vh - 105px); /* altura hero menos header */
+  margin-top: -30px; 
+  min-height: calc(100vh - 105px); 
 }
 
 .hero-left {
@@ -173,7 +173,7 @@ header {
   padding-right: 40px;
 }
 
-/* Carrusel hero */
+// Carrusel hero 
 .carousel {
   position: relative;
   width: 400px;
@@ -203,9 +203,10 @@ header {
   width: 100%;
   height: 100%;
   z-index: -1;
-  background: #0a0a0a; /* fondo oscuro */
+  background: #0a0a0a; 
   overflow: hidden;
 }
+<<<<<<< HEAD*/
 /* Puedes escalarlas y posicionarlas para ajustarlas a tu hero */
 /*=============================================== FIN CSS HOME*/
 /*=============================================== CSS SERVICE PAGE*/
@@ -252,6 +253,8 @@ header {
   align-items: center;
   gap: 15px;
 }
+/*=======
+>>>>>>> 8bb375655d3cb370e4d40b865ebbb3349b898ff5*/
 /* ======================
    MEDIA QUERIES
    ====================== */
@@ -329,4 +332,76 @@ header {
     flex-direction: column;
     gap: 20px;
   }
+}
+/*=============================================== FIN CSS HOME*/
+/*=============================================== CSS SERVICE PAGE*/
+#particles-js {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* detrás del contenido */
+  background: #0a0a0a; /* fondo oscuro */
+}
+
+.services-header {
+  width: 100%;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+.services-grid {
+  display: flex;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.service-box {
+  background: rgba(255,255,255,0.05);
+  padding: 30px;
+  border-radius: 15px;
+  flex: 1;
+}
+.service-box h3 {
+  color: #ffaa00;
+}
+.service-box p{
+  text-align: justify;
+}
+.service-imgANdtitle{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 15px;
+}
+/*=============================================== FIN CSS SERVICE PAGE*/
+/*=============================================== CSS CONTACT PAGE*/
+.contact{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 30px;
+  margin-top: 50px;
+}
+.contact-form-bg{
+  background: rgba(255,255,255,0.05);
+  padding: 30px;
+  border-radius: 15px;
+  width: 100%;
+  max-width: 500px;
+}
+.contact-form{
+  display: flex;
+  flex-direction: column;
+}
+.contact-info{
+  background: rgba(255,255,255,0.05);
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
