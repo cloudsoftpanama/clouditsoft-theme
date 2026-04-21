@@ -1,22 +1,34 @@
-const services = document.querySelectorAll('.service');
-let index = 0;
+document.addEventListener('DOMContentLoaded', () => {
+  const services = document.querySelectorAll('.service');
+  let index = 0;
 
-function showNextService() {
-  services[index].classList.remove('active');
-  services[index].classList.add('exit');
+  function showNextService() {
+    const current = services[index];
 
-  index = (index + 1) % services.length;
+    // Aplicar animación a la carta actual
+    current.classList.add('animate');
 
-  services[index].classList.add('active');
+    // Después de la animación (3s), limpiar y pasar a la siguiente carta
+    setTimeout(() => {
+      current.classList.remove('animate');
+      current.style.opacity = '0';
+      current.style.transform = 'translateX(100%)'; // prepara la siguiente entrada
 
-  setTimeout(() => {
-    services.forEach(s => s.classList.remove('exit'));
-  }, 600);
-}
+      // siguiente carta
+      index = (index + 1) % services.length;
+      showNextService(); // recursivo para la siguiente carta
+    }, 3000); // debe coincidir con duración de la animación
+  }
 
+<<<<<<< HEAD
 // autoplay
 setInterval(showNextService, 3000);
 //=============================== JS PARTICLES SERVICE PAGE===============================
+=======
+  showNextService(); // iniciar carrusel
+});
+
+>>>>>>> 63e3b6ffd0fa1a68a54197af5132cf2d3995c54f
 particlesJS("particles-js", {
   particles: {
     number: { value: 60 },
@@ -42,6 +54,7 @@ particlesJS("particles-js", {
     }
   }
 });
+<<<<<<< HEAD
 //=============================== FIN JS PARTICLES SERVICE PAGE===============================
 //=============================== JS FORM FUNCTION ===============================
 function procesar_formulario_contacto() {
@@ -74,3 +87,85 @@ function procesar_formulario_contacto() {
 
 add_action('admin_post_nopriv_enviar_formulario', 'procesar_formulario_contacto');
 add_action('admin_post_enviar_formulario', 'procesar_formulario_contacto');
+=======
+
+document.addEventListener('DOMContentLoaded', () => {
+  const bg = document.getElementById('wow-bg');
+  const canvas = document.createElement('canvas');
+  canvas.width = bg.offsetWidth;
+  canvas.height = bg.offsetHeight;
+  bg.appendChild(canvas);
+  const ctx = canvas.getContext('2d');
+
+  const width = canvas.width;
+  const height = canvas.height;
+
+  // Partículas energéticas
+  const particles = [];
+  const numParticles = 120;
+
+  for (let i = 0; i < numParticles; i++) {
+    particles.push({
+      x: Math.random() * width,
+      y: Math.random() * height,
+      vx: (Math.random() - 0.5) * 1.5,
+      vy: (Math.random() - 0.5) * 1.5,
+      size: Math.random() * 2 + 1,
+      color: Math.random() < 0.5 ? '#ff7f00' : '#00ffff'
+    });
+  }
+
+  // Rayos estilo relámpago
+  const bolts = [];
+
+
+
+  function draw() {
+    ctx.clearRect(0, 0, width, height);
+
+    // Dibujar partículas
+    particles.forEach(p => {
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+      ctx.fillStyle = p.color;
+      ctx.shadowColor = p.color;
+      ctx.shadowBlur = 6;
+      ctx.fill();
+
+      // Movimiento
+      p.x += p.vx;
+      p.y += p.vy;
+
+      // Reaparece al cruzar límites
+      if (p.x < 0) p.x = width;
+      if (p.x > width) p.x = 0;
+      if (p.y < 0) p.y = height;
+      if (p.y > height) p.y = 0;
+    });
+
+    // Dibujar rayos
+    bolts.forEach((bolt, idx) => {
+      ctx.beginPath();
+      ctx.moveTo(bolt.x, bolt.y);
+      bolt.segments.forEach(seg => ctx.lineTo(seg.x, seg.y));
+      ctx.strokeStyle = 'rgba(255,127,0,0.9)';
+      ctx.lineWidth = bolt.thickness;
+      ctx.shadowColor = '#ff7f00';
+      ctx.shadowBlur = 12;
+      ctx.stroke();
+
+      bolt.x += bolt.speed;
+      bolt.segments.forEach(seg => seg.x += bolt.speed);
+
+      if (bolt.segments[bolt.segments.length - 1].x > width + 50) {
+        bolts.splice(idx, 1);
+      }
+    });
+
+  
+    requestAnimationFrame(draw);
+  }
+
+  draw();
+});
+>>>>>>> 63e3b6ffd0fa1a68a54197af5132cf2d3995c54f
